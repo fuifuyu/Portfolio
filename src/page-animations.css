@@ -1,0 +1,67 @@
+@keyframes rotate-left-exit {
+  from {
+  }
+  to {
+    transform: translateX(-100%) rotateY(90deg);
+    opacity: 0.3;
+  }
+}
+@keyframes rotate-left-enter {
+  from {
+    transform: translateX(100%) rotateY(-90deg);
+    opacity: 0.3;
+  }
+  to {
+  }
+}
+
+.rotate-left-exit {
+  animation-name: rotate-left-exit;
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  transform-origin: 100% 50%;
+  z-index: 1;
+}
+.rotate-left-enter {
+  animation-name: rotate-left-enter;
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  transform-origin: 0% 50%;
+  z-index: 1;
+}
+
+@keyframes rotate-right-exit {
+  from {
+  }
+  to {
+    transform: translateX(100%) rotateY(-90deg);
+    opacity: 0.3;
+  }
+}
+@keyframes rotate-right-enter {
+  from {
+    transform: translateX(-100%) rotateY(90deg);
+    opacity: 0.3;
+  }
+  to {
+  }
+}
+
+.rotate-right-exit {
+  animation-name: rotate-right-exit;
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  transform-origin: 0% 50%;
+  z-index: 1;
+}
+.rotate-right-enter {
+  animation-name: rotate-right-enter;
+  animation-duration: 800ms;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  transform-origin: 100% 50%;
+  z-index: 1;
+}
