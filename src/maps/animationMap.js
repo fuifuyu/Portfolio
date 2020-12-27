@@ -8,8 +8,8 @@ export const animPresetMap = {
     exiting: "rotate-right-exit",
   },
   rotateUp: {
-    entering: "rotate-Up-enter",
-    exiting: "rotate-Up-exit",
+    entering: "rotate-up-enter",
+    exiting: "rotate-up-exit",
   },
   rotateDown: {
     entering: "rotate-down-enter",
@@ -18,10 +18,34 @@ export const animPresetMap = {
 }
 
 export const roomMap = {
-  "/": {
-    "/about": "rotateLeft",
+  intro: {
+    skill: "rotateRight",
+    timeline: "rotateRight",
+    goal: "rotateUp",
+    gallery: "rotateRight",
   },
-  "/about": {
-    "/": "rotateRight",
+  skill: {
+    intro: "rotateLeft",
+    timeline: "rotateRight",
+    goal: "rotateUp",
+    gallery: "rotateRight",
+  },
+  timeline: {
+    intro: "rotateLeft",
+    skill: "rotateLeft",
+    goal: "rotateUp",
+    gallery: "rotateRight",
+  },
+  goal: {
+    intro: "rotateDown",
+    skill: "rotateDown",
+    timeline: "rotateDown",
+    gallery: "rotateDown",
+  },
+  gallery: {
+    intro: "rotateLeft",
+    skill: "rotateLeft",
+    timeline: "rotateLeft",
+    goal: "rotateUp",
   },
 }

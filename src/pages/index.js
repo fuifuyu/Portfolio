@@ -5,15 +5,17 @@ import { roomMap, animPresetMap } from "../maps/animationMap"
 import "../page-animations.css"
 import "./index.css"
 
-const Home = props => <div className="text-center mt-96">Home</div>
+const Intro = props => <div className="text-center mt-96">Intro</div>
+const Skill = props => <div className="text-center mt-96">Skill</div>
+const Timeline = props => <div className="text-center mt-96">Timeline</div>
+const Goal = props => <div className="text-center mt-96">Goal</div>
+const Gallery = props => <div className="text-center mt-96">Gallery</div>
 
-const About = props => <div className="text-center mt-96">About</div>
-
-let nextPage = "/"
-let curPage = "/"
+let nextPage = "intro"
+let curPage = "intro"
 
 const IndexPage = () => {
-  const [page, setPage] = React.useState("/")
+  const [page, setPage] = React.useState("intro")
   function navigate(key) {
     curPage = page
     nextPage = key
@@ -24,26 +26,36 @@ const IndexPage = () => {
       <Navbar navigate={navigate} />
       <div className="page-wrapper">
         <TransitionGroup component={null}>
-          <Transition key={page} timeout={800}>
+          <Transition key={page} timeout={2000}>
             {state => {
               let animClass = ""
               if (state == "entering" || state == "exiting") {
+                console.log(curPage, nextPage, roomMap)
                 let preset = roomMap[curPage][nextPage]
                 if (preset) {
-                  animClass = animPresetMap[preset][state]
+                  animClass = " rotate " + animPresetMap[preset][state]
                 }
               }
               let comp
               switch (page) {
-                case "/":
-                  comp = <Home />
+                case "intro":
+                  comp = <Intro />
                   break
-                case "/about":
-                  comp = <About />
+                case "skill":
+                  comp = <Skill />
+                  break
+                case "timeline":
+                  comp = <Timeline />
+                  break
+                case "goal":
+                  comp = <Goal />
+                  break
+                case "gallery":
+                  comp = <Gallery />
                   break
               }
               return (
-                <div className={"bg-gray-300 page " + animClass}>{comp}</div>
+                <div className={"bg-gray-300 page" + animClass}>{comp}</div>
               )
             }}
           </Transition>
