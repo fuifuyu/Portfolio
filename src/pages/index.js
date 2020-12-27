@@ -1,15 +1,10 @@
 import React from "react"
 import Navbar from "../components/navbar"
 import { TransitionGroup, Transition } from "react-transition-group"
-import { roomMap, animPresetMap } from "../maps/animationMap"
-import "../page-animations.css"
+import { roomMap, animPresetMap } from "../animation/animationMap"
+import "../animation/page-animations.css"
 import "./index.css"
-
-const Intro = props => <div className="text-center mt-96">Intro</div>
-const Skill = props => <div className="text-center mt-96">Skill</div>
-const Timeline = props => <div className="text-center mt-96">Timeline</div>
-const Goal = props => <div className="text-center mt-96">Goal</div>
-const Gallery = props => <div className="text-center mt-96">Gallery</div>
+import { Intro, Skill, Timeline, Goal, Gallery } from "./pages.js"
 
 let nextPage = "intro"
 let curPage = "intro"
@@ -30,7 +25,6 @@ const IndexPage = () => {
             {state => {
               let animClass = ""
               if (state == "entering" || state == "exiting") {
-                console.log(curPage, nextPage, roomMap)
                 let preset = roomMap[curPage][nextPage]
                 if (preset) {
                   animClass = " rotate " + animPresetMap[preset][state]
