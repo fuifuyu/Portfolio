@@ -20,21 +20,18 @@ export const animPresetMap = {
 export const roomMap = {
   intro: {
     skill: "rotateRight",
-    timeline: "rotateRight",
     goal: "rotateUp",
-    gallery: "rotateRight",
+    gallery: "rotateLeft",
   },
   skill: {
-    intro: "rotateLeft",
     timeline: "rotateRight",
+    intro: "rotateLeft",
     goal: "rotateUp",
-    gallery: "rotateRight",
   },
   timeline: {
-    intro: "rotateLeft",
     skill: "rotateLeft",
-    goal: "rotateUp",
     gallery: "rotateRight",
+    goal: "rotateUp",
   },
   goal: {
     intro: "rotateDown",
@@ -43,8 +40,7 @@ export const roomMap = {
     gallery: "rotateDown",
   },
   gallery: {
-    intro: "rotateLeft",
-    skill: "rotateLeft",
+    intro: "rotateRight",
     timeline: "rotateLeft",
     goal: "rotateUp",
   },

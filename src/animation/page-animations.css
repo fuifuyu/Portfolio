@@ -1,6 +1,6 @@
 .rotate {
   z-index: 1;
-  animation-duration: 1500ms;
+  animation-duration: 1200ms;
   animation-timing-function: ease;
   animation-fill-mode: both;
 }

@@ -8,3 +8,12 @@ body,
 #gatsby-focus-wrapper {
   height: 100%;
 }
+
+@layer utilities {
+  .anim-duration-600 {
+    animation-duration: 600ms !important;
+  }
+  .anim-duration-1500 {
+    animation-duration: 1500ms !important;
+  }
+}
