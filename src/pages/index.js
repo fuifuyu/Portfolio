@@ -10,6 +10,8 @@ let targetPage = [] //change this to an array
 let prevPage = "intro"
 let numTransition = 0
 let multipleRoute = false
+let pageOrder = Object.keys(roomMap)
+let keyCooldown = false
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
   function navigate(key) {
@@ -38,7 +40,50 @@ const IndexPage = () => {
     multipleRoute = targetPage.length > 1
     prevPage = page
     setPage(targetPage[0])
-    console.log(targetPage)
+  }
+  function getNextPage(forward) {
+    let index = pageOrder.indexOf(page)
+    if (forward) {
+      index++
+    } else {
+      index--
+    }
+    if (index >= pageOrder.length) index = 0
+    else if (index < 0) index = pageOrder.length - 1
+    return index
+  }
+  window.onwheel = function (e) {
+    if (keyCooldown) return
+    let index = getNextPage(e.deltaY > 0) //navigate forward or backward
+    navigate(pageOrder[index])
+    keyCooldown = true
+    setTimeout(() => {
+      keyCooldown = false
+    }, 800)
+  }
+  window.onkeyup = e => {
+    if (keyCooldown) return
+    if (e.key == "ArrowDown" || e.key == "s") {
+      if (page != "goal") return
+      navigate(prevPage)
+    } else if (e.key == "ArrowUp" || e.key == "w") {
+      if (page == "goal") return
+      navigate("goal")
+    } else if (e.key == "ArrowLeft" || e.key == "a") {
+      if (page == "goal") return
+      let index = getNextPage(false)
+      if (pageOrder[index] == "goal") index--
+      navigate(pageOrder[index])
+    } else if (e.key == "ArrowRight" || e.key == "d") {
+      if (page == "goal") return
+      let index = getNextPage(true)
+      if (pageOrder[index] == "goal") index++
+      navigate(pageOrder[index])
+    } else return
+    keyCooldown = true
+    setTimeout(() => {
+      keyCooldown = false
+    }, 800)
   }
   return (
     <>
