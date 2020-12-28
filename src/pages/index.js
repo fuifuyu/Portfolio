@@ -4,7 +4,7 @@ import { TransitionGroup, Transition } from "react-transition-group"
 import { roomMap, animPresetMap } from "../animation/animationMap"
 import "../animation/page-animations.css"
 import "./index.css"
-import { Intro, Skill, Timeline, Goal, Gallery } from "./pages.js"
+import { Intro, Skill, Timeline, Goal, Gallery } from "../pages.js"
 
 let targetPage = [] //change this to an array
 let prevPage = "intro"
@@ -52,38 +52,40 @@ const IndexPage = () => {
     else if (index < 0) index = pageOrder.length - 1
     return index
   }
-  window.onwheel = function (e) {
-    if (keyCooldown) return
-    let index = getNextPage(e.deltaY > 0) //navigate forward or backward
-    navigate(pageOrder[index])
-    keyCooldown = true
-    setTimeout(() => {
-      keyCooldown = false
-    }, 800)
-  }
-  window.onkeyup = e => {
-    if (keyCooldown) return
-    if (e.key == "ArrowDown" || e.key == "s") {
-      if (page != "goal") return
-      navigate(prevPage)
-    } else if (e.key == "ArrowUp" || e.key == "w") {
-      if (page == "goal") return
-      navigate("goal")
-    } else if (e.key == "ArrowLeft" || e.key == "a") {
-      if (page == "goal") return
-      let index = getNextPage(false)
-      if (pageOrder[index] == "goal") index--
+  if (typeof window !== `undefined`) {
+    window.onwheel = function (e) {
+      if (keyCooldown) return
+      let index = getNextPage(e.deltaY > 0) //navigate forward or backward
       navigate(pageOrder[index])
-    } else if (e.key == "ArrowRight" || e.key == "d") {
-      if (page == "goal") return
-      let index = getNextPage(true)
-      if (pageOrder[index] == "goal") index++
-      navigate(pageOrder[index])
-    } else return
-    keyCooldown = true
-    setTimeout(() => {
-      keyCooldown = false
-    }, 800)
+      keyCooldown = true
+      setTimeout(() => {
+        keyCooldown = false
+      }, 800)
+    }
+    window.onkeyup = e => {
+      if (keyCooldown) return
+      if (e.key == "ArrowDown" || e.key == "s") {
+        if (page != "goal") return
+        navigate(prevPage)
+      } else if (e.key == "ArrowUp" || e.key == "w") {
+        if (page == "goal") return
+        navigate("goal")
+      } else if (e.key == "ArrowLeft" || e.key == "a") {
+        if (page == "goal") return
+        let index = getNextPage(false)
+        if (pageOrder[index] == "goal") index--
+        navigate(pageOrder[index])
+      } else if (e.key == "ArrowRight" || e.key == "d") {
+        if (page == "goal") return
+        let index = getNextPage(true)
+        if (pageOrder[index] == "goal") index++
+        navigate(pageOrder[index])
+      } else return
+      keyCooldown = true
+      setTimeout(() => {
+        keyCooldown = false
+      }, 800)
+    }
   }
   return (
     <>
