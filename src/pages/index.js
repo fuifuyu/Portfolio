@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Navbar from "../components/navbar"
 import { TransitionGroup, Transition } from "react-transition-group"
 import { roomMap, animPresetMap } from "../animation/animationMap"
@@ -21,6 +21,27 @@ let keyCooldown = false
 
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
+  const [loaded, setLoaded] = React.useState(false)
+  useEffect(() => {
+    const images = [
+      require("../images/background/intro.png"),
+      require("../images/background/coming-soon.png"),
+      require("../images/background/goal.png"),
+      require("../images/background/timeline-bg.png"),
+    ]
+    const promises = images.map(
+      img =>
+        new Promise((resolve, rejects) => {
+          const image = new Image()
+          image.src = img
+          image.onload = resolve
+          image.onerror = rejects
+        })
+    )
+    Promise.all(promises).then(() => {
+      setTimeout(() => setLoaded(true), 2000)
+    })
+  }, [])
   function navigate(key) {
     targetPage = []
     numTransition = 0
@@ -94,7 +115,12 @@ const IndexPage = () => {
       }, 800)
     }
   }
-
+  if (!loaded)
+    return (
+      <div className="h-full relative">
+        <div className="loader mx-auto"></div>
+      </div>
+    )
   return (
     <>
       <Navbar navigate={navigate} />
