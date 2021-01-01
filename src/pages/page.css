@@ -1,0 +1,34 @@
+.intro {
+  background-image: url("../images/background/intro.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.skill {
+  background-image: url("../images/background/coming-soon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.goal {
+  background-image: url("../images/background/goal.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.timeline {
+  background-image: url("../images/background/timeline-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gallery {
+  background-image: url("../images/background/coming-soon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

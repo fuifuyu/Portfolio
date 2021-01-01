@@ -4,7 +4,13 @@ import { TransitionGroup, Transition } from "react-transition-group"
 import { roomMap, animPresetMap } from "../animation/animationMap"
 import "../animation/page-animations.css"
 import "./index.css"
-import { Intro, Skill, Timeline, Goal, Gallery } from "../pages.js"
+
+import Intro from "./intro"
+import Skill from "./skill"
+import Timeline from "./timeline"
+import Goal from "./goal"
+import Gallery from "./gallery"
+import "./page.css"
 
 let targetPage = [] //change this to an array
 let prevPage = "intro"
@@ -12,6 +18,7 @@ let numTransition = 0
 let multipleRoute = false
 let pageOrder = Object.keys(roomMap)
 let keyCooldown = false
+
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
   function navigate(key) {
@@ -87,6 +94,7 @@ const IndexPage = () => {
       }, 800)
     }
   }
+
   return (
     <>
       <Navbar navigate={navigate} />
@@ -122,26 +130,30 @@ const IndexPage = () => {
                 numTransition++
               }
               let comp
+              let bgClass
               switch (page) {
                 case "intro":
+                  bgClass = " intro"
                   comp = <Intro />
                   break
                 case "skill":
+                  bgClass = " skill"
                   comp = <Skill />
                   break
                 case "timeline":
+                  bgClass = " timeline"
                   comp = <Timeline />
                   break
                 case "goal":
+                  bgClass = " goal"
                   comp = <Goal />
                   break
                 case "gallery":
+                  bgClass = " gallery"
                   comp = <Gallery />
                   break
               }
-              return (
-                <div className={"bg-gray-300 page" + animClass}>{comp}</div>
-              )
+              return <div className={"page" + bgClass + animClass}>{comp}</div>
             }}
           </Transition>
         </TransitionGroup>
