@@ -1,0 +1,10 @@
+.hoverable {
+  transition: transform 0.25s, height 0.25s;
+  transition-timing-function: ease-out;
+  transform: translateY(50%);
+  height: 100%;
+}
+.hoverable:hover {
+  transform: translateY(0%);
+  height: 50%;
+}
