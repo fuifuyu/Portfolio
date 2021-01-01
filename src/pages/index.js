@@ -39,7 +39,7 @@ const IndexPage = () => {
         })
     )
     Promise.all(promises).then(() => {
-      setTimeout(() => setLoaded(true), 2000)
+      setLoaded(true)
     })
   }, [])
   function navigate(key) {
