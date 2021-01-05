@@ -155,31 +155,18 @@ const IndexPage = () => {
               } else if (numTransition >= 2) {
                 numTransition++
               }
-              let comp
-              let bgClass
               switch (page) {
                 case "intro":
-                  bgClass = " intro"
-                  comp = <Intro />
-                  break
+                  return <Intro className={"page" + animClass} />
                 case "skill":
-                  bgClass = " skill"
-                  comp = <Skill />
-                  break
+                  return <Skill className={"page" + animClass} />
                 case "timeline":
-                  bgClass = " timeline"
-                  comp = <Timeline />
-                  break
+                  return <Timeline className={"page" + animClass} />
                 case "goal":
-                  bgClass = " goal"
-                  comp = <Goal />
-                  break
+                  return <Goal className={"page" + animClass} />
                 case "gallery":
-                  bgClass = " gallery"
-                  comp = <Gallery />
-                  break
+                  return <Gallery className={"page" + animClass} />
               }
-              return <div className={"page" + bgClass + animClass}>{comp}</div>
             }}
           </Transition>
         </TransitionGroup>

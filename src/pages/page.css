@@ -32,3 +32,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.skill {
+  background-image: url("../images/background/skill.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,5 +1,9 @@
 import React from "react"
 
-export default function Skill() {
-  return <div className="text-center">Skill</div>
+export default function Skill({ className }) {
+  return (
+    <div className={className + " skill"}>
+      <div className="text-center">Intro</div>
+    </div>
+  )
 }

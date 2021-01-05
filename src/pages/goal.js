@@ -1,5 +1,9 @@
 import React from "react"
 
-export default function Goal() {
-  return <div className="text-center">Goal</div>
+export default function Goal({ className }) {
+  return (
+    <div className={className + " goal"}>
+      <div className="text-center">Intro</div>
+    </div>
+  )
 }

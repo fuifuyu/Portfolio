@@ -1,5 +1,9 @@
 import React from "react"
 
-export default function Timeline() {
-  return <div className="text-center">Timeline</div>
+export default function Timeline({ className }) {
+  return (
+    <div className={className + " timeline"}>
+      <div className="text-center">Intro</div>
+    </div>
+  )
 }
