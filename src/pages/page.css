@@ -1,39 +1,39 @@
-.intro {
+.bg-intro {
   background-image: url("../images/background/intro.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.skill {
+.bg-skill {
   background-image: url("../images/background/coming-soon.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.goal {
+.bg-goal {
   background-image: url("../images/background/goal.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.timeline {
+.bg-timeline {
   background-image: url("../images/background/timeline-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.gallery {
+.bg-gallery {
   background-image: url("../images/background/coming-soon.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.skill {
+.bg-skill {
   background-image: url("../images/background/skill.jpg");
   background-position: center;
   background-repeat: no-repeat;

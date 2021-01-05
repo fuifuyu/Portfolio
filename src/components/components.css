@@ -8,3 +8,70 @@
   transform: translateY(0%);
   height: 50%;
 }
+
+@keyframes skill-load {
+  from {
+    width: 0%;
+  }
+}
+
+.bar {
+  background-color: #eee;
+  padding: 2px;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.bar::before {
+  content: attr(data-label);
+  display: inline-block;
+  padding: 0.2rem 0 0.2rem 0.6rem;
+  border-radius: inherit;
+  animation: skill-load 2s 0s;
+}
+
+.bar.bar-1::before {
+  background-color: #a6cfe3;
+  width: calc(20% - 0.5rem);
+}
+.bar.bar-2::before {
+  background-color: #a6cfe3;
+  width: calc(40% - 0.5rem);
+}
+.bar.bar-3::before {
+  background-color: #f3b0ff;
+  width: calc(60% - 0.5rem);
+}
+.bar.bar-4::before {
+  background-color: #a6cfe3;
+  width: calc(80% - 0.5rem);
+}
+.bar.bar-5::before {
+  background-color: #a6cfe3;
+  width: calc(100% - 0.5rem);
+}
+
+.bar.bar-1::after {
+  margin-left: -4rem;
+  content: "Level 1";
+}
+
+.bar.bar-2::after {
+  margin-left: -4rem;
+  content: "Level 2";
+}
+.bar.bar-3::after {
+  margin-left: -4rem;
+  content: "level 3";
+}
+.bar.bar-4::after {
+  margin-left: -4rem;
+  content: "level 4";
+}
+.bar.bar-5::after {
+  margin-left: -4rem;
+  content: "level 4";
+}
