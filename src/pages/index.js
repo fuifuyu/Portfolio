@@ -24,10 +24,10 @@ const IndexPage = () => {
   const [loaded, setLoaded] = React.useState(false)
   useEffect(() => {
     const images = [
-      require("../images/background/intro.png"),
-      require("../images/background/coming-soon.png"),
-      require("../images/background/goal.png"),
-      require("../images/background/timeline-bg.png"),
+      require("../images/background/intro.jpg"),
+      require("../images/background/coming-soon.jpg"),
+      require("../images/background/goal.jpg"),
+      require("../images/background/timeline-bg.jpg"),
     ]
     const promises = images.map(
       img =>
