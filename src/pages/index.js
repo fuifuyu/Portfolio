@@ -28,6 +28,7 @@ const IndexPage = () => {
       require("../images/background/coming-soon.jpg"),
       require("../images/background/goal.jpg"),
       require("../images/background/timeline-bg.jpg"),
+      require("../images/timeline.png"),
     ]
     const promises = images.map(
       img =>
