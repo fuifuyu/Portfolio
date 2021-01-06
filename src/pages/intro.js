@@ -1,9 +1,23 @@
-import React from "react"
+import React, { useEffect } from "react"
+import "../animation/animation.css"
 
 export default function Intro({ className }) {
+  let ref = React.createRef()
+  useEffect(() => {
+    ref.current?.addEventListener("animationend", e => {
+      e.stopPropagation()
+    })
+  }, [])
   return (
     <div className={className + " bg-intro flex flex-col justify-center"}>
-      <div className="bg-tint bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded text-2xl">
+      <div
+        ref={ref}
+        className="bg-tint bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded-lg text-2xl fade-in"
+        onAnimationEnd={e => {
+          console.log("animationEnd")
+          e.stopPropagation()
+        }}
+      >
         <div className="mb-3 text-4xl">Hello!</div>
         <div className="mb-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue
