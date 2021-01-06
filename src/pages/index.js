@@ -3,14 +3,14 @@ import Navbar from "../components/navbar"
 import { TransitionGroup, Transition } from "react-transition-group"
 import { roomMap, animPresetMap } from "../animation/animationMap"
 import "../animation/page-animations.css"
-import "./index.css"
+import "./css/index.css"
 
 import Intro from "./intro"
 import Skill from "./skill"
 import Timeline from "./timeline"
 import Goal from "./goal"
 import Gallery from "./gallery"
-import "./page.css"
+import "./css/page.css"
 
 let targetPage = [] //change this to an array
 let prevPage = "intro"

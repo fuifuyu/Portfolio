@@ -1,5 +1,5 @@
 import React from "react"
-import "./timeline.css"
+import "./css/timeline.css"
 export default function Timeline({ className }) {
   return (
     <div className={className + " bg-timeline"}>
