@@ -3,7 +3,7 @@ import React from "react"
 export default function Intro({ className }) {
   return (
     <div className={className + " bg-intro flex flex-col justify-center"}>
-      <div className="bg-blue-200 bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded text-2xl">
+      <div className="bg-tint bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded text-2xl">
         <div className="mb-3 text-4xl">Hello!</div>
         <div className="mb-3">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean congue

@@ -1,21 +1,26 @@
 import React from "react"
-import board from "../images/board.png"
-
+import "./timeline.css"
 export default function Timeline({ className }) {
-  const [loaded, setLoaded] = React.useState(false)
-  let animClass = "translate-y-full"
-  if (loaded) animClass = ""
   return (
-    <div className={className + " bg-timeline flex flex-col justify-end"}>
-      <img
-        onLoad={() => {
-          setTimeout(() => {
-            setLoaded(true)
-          }, 1000)
+    <div className={className + " bg-timeline"}>
+      <div
+        className="relative w-1/2 h-1/2 mx-auto"
+        style={{ overflowX: "auto" }}
+        onWheel={e => {
+          console.log(e)
+          e.currentTarget.scrollLeft += e.deltaY
+          e.stopPropagation()
         }}
-        src={board}
-        className={`transition duration-500 ease-in-out transform ${animClass}`}
-      />
+      >
+        <div className="absolute-center-y flex flex-row text-xl text-white flex-nowrap">
+          <div class="card">test</div>
+          <div class="card">test</div>
+          <div class="card">test</div>
+          <div class="card">test</div>
+          <div class="card">test</div>
+          <div class="card">test</div>
+        </div>
+      </div>
     </div>
   )
 }
