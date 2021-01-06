@@ -1,5 +1,5 @@
 import React from "react"
-import board from "../images/timeline.png"
+import board from "../images/board.png"
 
 export default function Timeline({ className }) {
   const [loaded, setLoaded] = React.useState(false)
