@@ -127,7 +127,7 @@ const IndexPage = () => {
     )
   return (
     <>
-      <Navbar navigate={navigate} />
+      <Navbar navigate={navigate} active={page} />
       <div className="page-wrapper">
         <TransitionGroup component={null}>
           <Transition

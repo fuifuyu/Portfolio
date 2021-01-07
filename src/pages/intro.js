@@ -12,7 +12,7 @@ export default function Intro({ className }) {
     <div className={className + " bg-intro flex flex-col justify-center"}>
       <div
         ref={ref}
-        className="bg-tint bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded-lg text-2xl fade-in"
+        className="bg-tint-1 bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded-lg text-2xl fade-in"
       >
         <div className="mb-3 text-4xl">Hello!</div>
         <div className="mb-3">

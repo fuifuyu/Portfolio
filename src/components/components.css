@@ -1,12 +1,13 @@
-.hoverable {
+.hover-target {
   transition: transform 0.25s, height 0.25s;
   transition-timing-function: ease-out;
-  transform: translateY(50%);
-  height: 100%;
+  transform: translateY(200%);
 }
-.hoverable:hover {
+.detect-hover {
+  height: 20%;
+}
+.detect-hover:hover .hover-target {
   transform: translateY(0%);
-  height: 50%;
 }
 
 @keyframes skill-load {
@@ -74,4 +75,20 @@
 .bar.bar-5::after {
   margin-left: -4rem;
   content: "level 4";
+}
+
+button {
+  @apply px-4 py-1 bg-tint-1 focus:outline-none;
+}
+button:first-of-type {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+button:last-of-type {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+button.active {
+  @apply bg-tint-2;
 }

@@ -4,7 +4,7 @@
   border-left: 1px dashed;
   height: calc(100% - 1rem);
   min-width: 30%;
-  @apply border-tint;
+  @apply border-tint-1;
 }
 .slot:nth-child(odd) {
   border-bottom: 2px dashed;
@@ -12,10 +12,7 @@
   border-bottom-left-radius: 20px;
   padding-top: 0;
   margin-top: 1rem;
-  @apply flex;
-  @apply flex-col;
-  @apply justify-end;
-  @apply border-tint;
+  @apply flex flex-col justify-end border-tint-1;
 }
 .slot:nth-child(even) {
   border-top: 2px dashed;
@@ -23,7 +20,7 @@
   border-top-left-radius: 20px;
   padding-bottom: 0;
   margin-bottom: 1rem;
-  @apply border-tint;
+  @apply border-tint-1;
 }
 .slot:first-of-type {
   border-left: 0px;
