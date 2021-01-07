@@ -15,7 +15,6 @@ export default function Timeline({ className }) {
         className="relative w-1/2 h-1/2 mx-auto wipe"
         style={{ overflowX: "auto", overflowY: "hidden" }}
         onWheel={e => {
-          console.log(e)
           e.currentTarget.scrollLeft += e.deltaY
           e.stopPropagation()
         }}

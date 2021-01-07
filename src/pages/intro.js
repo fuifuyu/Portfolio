@@ -13,10 +13,6 @@ export default function Intro({ className }) {
       <div
         ref={ref}
         className="bg-tint bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded-lg text-2xl fade-in"
-        onAnimationEnd={e => {
-          console.log("animationEnd")
-          e.stopPropagation()
-        }}
       >
         <div className="mb-3 text-4xl">Hello!</div>
         <div className="mb-3">
