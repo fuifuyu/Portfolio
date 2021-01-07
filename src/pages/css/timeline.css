@@ -1,11 +1,12 @@
-.card {
+.slot {
   position: relative;
-  padding: 1rem 1.5rem 1rem 1.5rem;
+  padding: 1rem 1rem 1rem 1rem;
   border-left: 1px dashed;
   height: calc(100% - 1rem);
+  min-width: 30%;
   @apply border-tint;
 }
-.card:nth-child(odd) {
+.slot:nth-child(odd) {
   border-bottom: 2px dashed;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -14,17 +15,24 @@
   @apply flex;
   @apply flex-col;
   @apply justify-end;
+  @apply border-tint;
 }
-.card:nth-child(even) {
+.slot:nth-child(even) {
   border-top: 2px dashed;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
   padding-bottom: 0;
   margin-bottom: 1rem;
-  @apply self-start;
+  @apply border-tint;
 }
-.card:first-of-type {
+.slot:first-of-type {
   border-left: 0px;
+}
+
+.card {
+  padding: 0.5rem 1rem 1rem 1rem;
+  background-color: burlywood;
+  border-radius: 20px;
 }
 .card::before {
   display: block;
@@ -34,6 +42,10 @@
   border: 4px solid grey;
   border-radius: 100%;
   @apply mx-auto;
+}
+
+.card-body {
+  @apply text-base;
 }
 
 div::-webkit-scrollbar {

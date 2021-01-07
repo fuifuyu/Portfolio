@@ -12,13 +12,67 @@ export default function Timeline({ className }) {
           e.stopPropagation()
         }}
       >
-        <div className="absolute-center-y flex flex-row text-xl text-white flex-nowrap h-48">
-          <div class="card">test</div>
-          <div class="card">test</div>
-          <div class="card">test</div>
-          <div class="card">test</div>
-          <div class="card">test</div>
-          <div class="card">test</div>
+        <div className="absolute-center-y flex flex-row text-xl text-yellow-900 flex-nowrap h-48">
+          <div class="slot">
+            <div class="card">
+              <div class="card-title">
+                <div>Title</div>
+                <div>2012</div>
+              </div>
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                congue aliquet velit, id imperdiet ante malesuada eget.
+              </div>
+            </div>
+          </div>
+          <div class="slot">
+            <div class="card">
+              <div class="card-title">
+                <div>Title</div>
+                <div>2012</div>
+              </div>
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                congue aliquet velit, id imperdiet ante malesuada eget.
+              </div>
+            </div>
+          </div>
+          <div class="slot">
+            <div class="card">
+              <div class="card-title">
+                <div>Title</div>
+                <div>2012</div>
+              </div>
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                congue aliquet velit, id imperdiet ante malesuada eget.
+              </div>
+            </div>
+          </div>
+          <div class="slot">
+            <div class="card">
+              <div class="card-title">
+                <div>Title</div>
+                <div>2012</div>
+              </div>
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                congue aliquet velit, id imperdiet ante malesuada eget.
+              </div>
+            </div>
+          </div>
+          <div class="slot">
+            <div class="card">
+              <div class="card-title">
+                <div>Title</div>
+                <div>2012</div>
+              </div>
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+                congue aliquet velit, id imperdiet ante malesuada eget.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
