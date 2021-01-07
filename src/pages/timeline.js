@@ -1,10 +1,18 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./css/timeline.css"
+import "../animation/animation.css"
 export default function Timeline({ className }) {
+  let ref = React.createRef()
+  useEffect(() => {
+    ref.current?.addEventListener("animationend", e => {
+      e.stopPropagation()
+    })
+  }, [])
   return (
     <div className={className + " bg-timeline"}>
       <div
-        className="relative w-1/2 h-1/2 mx-auto"
+        ref={ref}
+        className="relative w-1/2 h-1/2 mx-auto wipe"
         style={{ overflowX: "auto", overflowY: "hidden" }}
         onWheel={e => {
           console.log(e)

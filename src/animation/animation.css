@@ -13,5 +13,18 @@
   animation: fadeIn 0.75s;
   animation-fill-mode: forwards;
   animation-delay: 250ms;
-  animation-timing-function: ease-in;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes wipe {
+  from {
+    width: 0;
+  }
+}
+
+.wipe {
+  animation: wipe 1s;
+  animation-fill-mode: backwards;
+  animation-delay: 250ms;
+  animation-timing-function: ease-out;
 }
