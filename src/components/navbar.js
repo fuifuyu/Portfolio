@@ -4,7 +4,7 @@ const Navbar = ({ navigate, active }) => {
   return (
     <>
       <div className="fixed inset-x-0 bottom-0 justify-center items-end flex flex-row z-10 detect-hover pb-4 text-center text-gray-700">
-        <div className="hover-target">
+        <div className="hover-target opacity-50">
           <button
             onClick={() => navigate("intro")}
             className={active == "intro" ? "active" : ""}
