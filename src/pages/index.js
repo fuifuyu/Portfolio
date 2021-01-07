@@ -18,7 +18,9 @@ let numTransition = 0
 let multipleRoute = false
 let pageOrder = Object.keys(roomMap)
 let keyCooldown = false
-
+if (typeof document !== `undefined`) {
+  document.body.style = "background: #30343d;"
+}
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
   const [loaded, setLoaded] = React.useState(false)
