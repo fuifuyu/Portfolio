@@ -23,8 +23,7 @@
 }
 
 .wipe {
-  animation: wipe 1s;
+  animation: wipe 0.75s;
   animation-fill-mode: backwards;
-  animation-delay: 250ms;
-  animation-timing-function: ease-out;
+  animation-delay: 850ms;
 }

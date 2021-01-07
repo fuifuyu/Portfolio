@@ -11,7 +11,7 @@ body,
 
 @layer utilities {
   .anim-duration-600 {
-    animation-duration: 600ms !important;
+    animation-duration: 750ms !important;
   }
   .anim-duration-1500 {
     animation-duration: 1500ms !important;
