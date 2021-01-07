@@ -22,6 +22,7 @@ let keyCooldown = false
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
   const [loaded, setLoaded] = React.useState(false)
+  const [showContent, setShowContent] = React.useState(true)
   useEffect(() => {
     const images = [
       require("../images/background/intro.jpg"),
@@ -127,7 +128,11 @@ const IndexPage = () => {
     )
   return (
     <>
-      <Navbar navigate={navigate} active={page} />
+      <Navbar
+        navigate={navigate}
+        active={page}
+        showContentFn={setShowContent}
+      />
       <div className="page-wrapper">
         <TransitionGroup component={null}>
           <Transition
@@ -161,15 +166,40 @@ const IndexPage = () => {
               }
               switch (page) {
                 case "intro":
-                  return <Intro className={"page" + animClass} />
+                  return (
+                    <Intro
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "skill":
-                  return <Skill className={"page" + animClass} />
+                  return (
+                    <Skill
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "timeline":
-                  return <Timeline className={"page" + animClass} />
+                  return (
+                    <Timeline
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "goal":
-                  return <Goal className={"page" + animClass} />
+                  return (
+                    <Goal
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "gallery":
-                  return <Gallery className={"page" + animClass} />
+                  return (
+                    <Gallery
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
               }
             }}
           </Transition>

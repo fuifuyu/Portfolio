@@ -1,6 +1,6 @@
 import React from "react"
 import Skillbar from "../components/skill-bar"
-export default function Skill({ className }) {
+export default function Skill({ className, showContent = true }) {
   const skills = [
     {
       label: "C#",
@@ -17,7 +17,7 @@ export default function Skill({ className }) {
   ]
   return (
     <div className={className + " bg-skill flex flex-col justify-center"}>
-      <Skillbar skills={skills} className="mx-auto"></Skillbar>
+      {showContent && <Skillbar skills={skills} className="mx-auto"></Skillbar>}
     </div>
   )
 }

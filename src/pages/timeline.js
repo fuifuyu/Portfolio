@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import "./css/timeline.css"
 import "../animation/animation.css"
-export default function Timeline({ className }) {
+export default function Timeline({ className, showContent }) {
   let ref = React.createRef()
   useEffect(() => {
     ref.current?.addEventListener("animationend", e => {
@@ -10,78 +10,80 @@ export default function Timeline({ className }) {
   }, [])
   return (
     <div className={className + " bg-timeline"}>
-      <div
-        ref={ref}
-        className="relative w-1/2 h-1/2 mx-auto wipe"
-        style={{ overflowX: "auto", overflowY: "hidden" }}
-        onWheel={e => {
-          e.currentTarget.scrollLeft += e.deltaY
-          e.stopPropagation()
-        }}
-      >
-        <div className="absolute-center-y flex flex-row text-xl text-yellow-900 flex-nowrap h-48">
-          <div class="slot">
-            <div class="card">
-              <div class="card-title">
-                <div>Title</div>
-                <div>2012</div>
-              </div>
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                congue aliquet velit, id imperdiet ante malesuada eget.
-              </div>
-            </div>
-          </div>
-          <div class="slot">
-            <div class="card">
-              <div class="card-title">
-                <div>Title</div>
-                <div>2012</div>
-              </div>
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                congue aliquet velit, id imperdiet ante malesuada eget.
+      {showContent && (
+        <div
+          ref={ref}
+          className="relative w-1/2 h-1/2 mx-auto wipe"
+          style={{ overflowX: "auto", overflowY: "hidden" }}
+          onWheel={e => {
+            e.currentTarget.scrollLeft += e.deltaY
+            e.stopPropagation()
+          }}
+        >
+          <div className="absolute-center-y flex flex-row text-xl text-yellow-900 flex-nowrap h-48">
+            <div class="slot">
+              <div class="card">
+                <div class="card-title">
+                  <div>Title</div>
+                  <div>2012</div>
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue aliquet velit, id imperdiet ante malesuada eget.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="slot">
-            <div class="card">
-              <div class="card-title">
-                <div>Title</div>
-                <div>2012</div>
-              </div>
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                congue aliquet velit, id imperdiet ante malesuada eget.
-              </div>
-            </div>
-          </div>
-          <div class="slot">
-            <div class="card">
-              <div class="card-title">
-                <div>Title</div>
-                <div>2012</div>
-              </div>
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                congue aliquet velit, id imperdiet ante malesuada eget.
+            <div class="slot">
+              <div class="card">
+                <div class="card-title">
+                  <div>Title</div>
+                  <div>2012</div>
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue aliquet velit, id imperdiet ante malesuada eget.
+                </div>
               </div>
             </div>
-          </div>
-          <div class="slot">
-            <div class="card">
-              <div class="card-title">
-                <div>Title</div>
-                <div>2012</div>
+            <div class="slot">
+              <div class="card">
+                <div class="card-title">
+                  <div>Title</div>
+                  <div>2012</div>
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue aliquet velit, id imperdiet ante malesuada eget.
+                </div>
               </div>
-              <div class="card-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                congue aliquet velit, id imperdiet ante malesuada eget.
+            </div>
+            <div class="slot">
+              <div class="card">
+                <div class="card-title">
+                  <div>Title</div>
+                  <div>2012</div>
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue aliquet velit, id imperdiet ante malesuada eget.
+                </div>
+              </div>
+            </div>
+            <div class="slot">
+              <div class="card">
+                <div class="card-title">
+                  <div>Title</div>
+                  <div>2012</div>
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aenean congue aliquet velit, id imperdiet ante malesuada eget.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }
