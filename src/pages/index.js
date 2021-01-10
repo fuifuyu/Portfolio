@@ -30,9 +30,8 @@ const IndexPage = () => {
       require("../images/background/intro.jpg"),
       require("../images/background/coming-soon.jpg"),
       require("../images/background/goal.jpg"),
-      require("../images/background/timeline-bg.jpg"),
+      require("../images/background/timeline.jpg"),
       require("../images/background/skill.jpg"),
-      require("../images/board.png"),
       require("../images/star1.png"),
       require("../images/star2.png"),
     ]

@@ -5,13 +5,6 @@
   background-size: cover;
 }
 
-.bg-skill {
-  background-image: url("../../images/background/coming-soon.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .bg-goal {
   background-image: url("../../images/background/goal.jpg");
   background-position: center;
@@ -20,8 +13,8 @@
 }
 
 .bg-timeline {
-  background-image: url("../../images/background/timeline-bg.jpg");
-  background-position: center;
+  background-image: url("../../images/background/timeline.jpg");
+  background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
 }
