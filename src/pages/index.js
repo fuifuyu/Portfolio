@@ -141,7 +141,7 @@ const IndexPage = () => {
                 if (preset) {
                   animClass = " rotate " + animPresetMap[preset][state]
                   if (multipleRoute) {
-                    animClass = " anim-duration-500" + animClass
+                    animClass = " anim-duration-600" + animClass
                   }
                 }
               } else if (numTransition == 4) {
