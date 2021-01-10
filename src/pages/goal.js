@@ -29,7 +29,7 @@ export default function Goal({ className, showContent }) {
         <div className="absolute top-0 right-32">
           <ImageContainer src={star2} size={{ width: "25rem" }}>
             <div className="content absolute-center-bottom goal-container">
-              <div>Integrate computer graphics concept into the website</div>
+              <div>Work on more projects related to computer graphics</div>
             </div>
           </ImageContainer>
         </div>
@@ -43,7 +43,7 @@ export default function Goal({ className, showContent }) {
         <div className="absolute bottom-10 right-10">
           <ImageContainer src={star1} size={{ width: "23rem" }}>
             <div className="content absolute-center-bottom goal-container">
-              <div>Something...</div>
+              <div>Gain more experience in software and web dev.</div>
             </div>
           </ImageContainer>
         </div>

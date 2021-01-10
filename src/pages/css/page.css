@@ -14,7 +14,7 @@
 
 .bg-timeline {
   background-image: url("../../images/background/timeline.jpg");
-  background-position: 50% 100%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }

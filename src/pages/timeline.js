@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import "./css/timeline.css"
 import "../animation/animation.css"
 import fox from "../images/timeline/fox.gif"
-import maze from "../images/timeline/hana_maze.gif"
+import maze from "../images/timeline/maze.gif"
 import trapped from "../images/timeline/trapped.gif"
 
 const history = [

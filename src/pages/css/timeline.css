@@ -65,21 +65,21 @@
 }
 .card-hover-image {
   visibility: hidden;
-  transition: transform, width, height;
+  transition: width, height;
   transition-duration: 0.5s;
   transform-origin: top center;
   left: 50%;
-  transform: translateX(-50%);
+  top: 105%;
   width: 0;
   height: 0;
+  transform: translateX(-50%);
   @apply absolute;
 }
 .card-image-container:hover .card-hover-image {
   visibility: visible;
   z-index: 9999;
-  width: 100%;
-  height: auto;
-  transform: translateX(-50%) scale(3);
+  width: auto;
+  height: 200%;
 }
 
 div::-webkit-scrollbar {

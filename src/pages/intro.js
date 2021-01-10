@@ -18,8 +18,8 @@ export default function Intro({ className, showContent = true }) {
           <p className="mb-3 text-4xl">Hi!</p>
           <p>I am a computer science student in Canada who likes to draw.</p>
           <p>
-            I wanted to present myself - with not only plain words on the screen
-            or paper. A "world" that express my character.
+            I wanted to express my character - with not only plain words on the
+            screen or paper. And so, this "world" is born.
           </p>
           <p>
             This is also a test ground to play with concepts that I learnt. I
