@@ -36,3 +36,10 @@ body,
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
+.absolute-center-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+}

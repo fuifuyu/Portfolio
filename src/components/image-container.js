@@ -6,7 +6,6 @@ const ImageContainer = ({ children, size, src }) => {
     <div className="relative">
       <img
         src={src}
-        className="img-star"
         style={{ width: size?.width ?? "auto", height: size?.height ?? "auto" }}
       />
       {children}

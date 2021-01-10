@@ -32,3 +32,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.hide .content {
+  display: none;
+}
+
+.goal-container {
+  @apply text-xl bg-opacity-75 bg-tint-1 px-3 py-2 rounded text-center;
+}
