@@ -11,10 +11,7 @@ body,
 
 @layer utilities {
   .anim-duration-600 {
-    animation-duration: 750ms !important;
-  }
-  .anim-duration-1500 {
-    animation-duration: 1500ms !important;
+    animation-duration: 600ms !important;
   }
 }
 
@@ -40,6 +37,6 @@ body,
 .absolute-center-bottom {
   position: absolute;
   left: 50%;
-  bottom: 0;
-  transform: translate(-50%, -50%);
+  top: 80%;
+  transform: translateX(-50%);
 }

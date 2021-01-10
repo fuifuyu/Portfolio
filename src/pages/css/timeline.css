@@ -3,8 +3,8 @@
   padding: 1rem 1rem 1rem 1rem;
   border-left: 1px dashed;
   height: calc(100% - 1rem);
-  min-width: 30%;
-  @apply border-tint-1;
+  width: 350px;
+  @apply border-tint-1 flex-shrink-0;
 }
 .slot:nth-child(odd) {
   border-bottom: 2px dashed;
@@ -36,13 +36,50 @@
   content: "";
   width: 0.5rem;
   height: 0.5rem;
-  border: 4px solid grey;
+  border: 4px solid rgb(41, 26, 20);
   border-radius: 100%;
   @apply mx-auto;
 }
 
 .card-body {
   @apply text-base;
+}
+
+.card-end {
+  @apply flex flex-row flex-wrap justify-center;
+}
+
+.card.projects {
+  background-color: rgb(201, 187, 140);
+}
+.card.work {
+  background-color: rgb(158, 190, 184);
+}
+.card.others {
+  background-color: rgb(177, 171, 165);
+}
+
+.card-image {
+  transition-duration: 0.5s;
+  @apply h-14 w-14 mx-1 rounded-full;
+}
+.card-hover-image {
+  visibility: hidden;
+  transition: transform, width, height;
+  transition-duration: 0.5s;
+  transform-origin: top center;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  @apply absolute;
+}
+.card-image-container:hover .card-hover-image {
+  visibility: visible;
+  z-index: 9999;
+  width: 100%;
+  height: auto;
+  transform: translateX(-50%) scale(3);
 }
 
 div::-webkit-scrollbar {

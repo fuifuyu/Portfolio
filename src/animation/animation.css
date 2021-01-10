@@ -19,11 +19,13 @@
 @keyframes wipe {
   from {
     width: 0;
+    min-width: 0;
   }
 }
 
 .wipe {
-  animation: wipe 0.75s;
+  animation: wipe 0.7s;
   animation-fill-mode: backwards;
-  animation-delay: 850ms;
+  animation-timing-function: ease-in-out;
+  animation-delay: 450ms;
 }

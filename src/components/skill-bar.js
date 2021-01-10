@@ -21,7 +21,7 @@ const Skillbar = ({ className, skills = [] }) => {
       ></div>
     )
   })
-  return <div className={`${className} w-3/5 h-1/2 p-8`}>{children}</div>
+  return <div className={className}>{children}</div>
 }
 
 export default Skillbar

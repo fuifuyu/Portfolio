@@ -11,7 +11,7 @@ const Navbar = ({ navigate, showContentFn, active }) => {
     <>
       <div className="fixed inset-x-0 bottom-0 z-10 detect-hover pb-4">
         <div
-          className={`${hoverTarget} opacity-50 justify-center items-end flex flex-row h-full text-center text-gray-700`}
+          className={`${hoverTarget} opacity-50 justify-center items-end flex flex-row h-full text-center text-gray-700 navbar`}
         >
           <button
             onClick={() => navigate("intro")}

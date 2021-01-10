@@ -15,19 +15,21 @@ export default function Intro({ className, showContent = true }) {
           ref={ref}
           className="bg-tint-1 bg-opacity-60 w-7/12 p-8 ml-10 text-gray-700 rounded-lg text-2xl fade-in"
         >
-          <div className="mb-3 text-4xl">Hello!</div>
-          <div className="mb-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            congue aliquet velit, id imperdiet ante malesuada eget. In nec
-            posuere erat. Pellentesque habitant morbi tristique senectus et
-            netus et malesuada fames ac turpis egestas. Curabitur ultrices,
-            lacus ac tincidunt dignissim, felis magna mollis lorem, eget pretium
-            enim erat ac nunc.
-          </div>
-          <div>
-            Nunc sed risus eget risus porttitor consectetur vitae sed eros. In
-            ultricies dapibus purus a feugiat.
-          </div>
+          <p className="mb-3 text-4xl">Hi!</p>
+          <p>I am a computer science student in Canada who likes to draw.</p>
+          <p>
+            I wanted to present myself - with not only plain words on the screen
+            or paper. A "world" that express my character.
+          </p>
+          <p>
+            This is also a test ground to play with concepts that I learnt. I
+            will evolve, and so will my world :)
+          </p>
+          <p>I hope you have a good journey and happy learning!</p>
+          <p className="text-base">
+            ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
+          </p>
+          <p className="mt-1">Contact: hhasuky@gmail.com</p>
         </div>
       )}
     </div>

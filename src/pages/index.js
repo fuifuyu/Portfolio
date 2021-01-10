@@ -17,7 +17,6 @@ let prevPage = "intro"
 let numTransition = 0
 let multipleRoute = false
 let pageOrder = Object.keys(roomMap)
-let keyCooldown = false
 if (typeof document !== `undefined`) {
   document.body.style = "background: #30343d;"
 }
@@ -88,16 +87,12 @@ const IndexPage = () => {
   }
   if (typeof window !== `undefined`) {
     window.onwheel = function (e) {
-      if (keyCooldown) return
+      if (targetPage.length > 0) return
       let index = getNextPage(e.deltaY > 0) //navigate forward or backward
       navigate(pageOrder[index])
-      keyCooldown = true
-      setTimeout(() => {
-        keyCooldown = false
-      }, 800)
     }
     window.onkeyup = e => {
-      if (keyCooldown) return
+      if (targetPage.length > 0) return
       if (e.key == "ArrowDown" || e.key == "s") {
         if (page != "goal") return
         navigate(prevPage)
@@ -115,10 +110,6 @@ const IndexPage = () => {
         if (pageOrder[index] == "goal") index++
         navigate(pageOrder[index])
       } else return
-      keyCooldown = true
-      setTimeout(() => {
-        keyCooldown = false
-      }, 800)
     }
   }
   if (!loaded)
@@ -150,7 +141,7 @@ const IndexPage = () => {
                 if (preset) {
                   animClass = " rotate " + animPresetMap[preset][state]
                   if (multipleRoute) {
-                    animClass = " anim-duration-600" + animClass
+                    animClass = " anim-duration-500" + animClass
                   }
                 }
               } else if (numTransition == 4) {
