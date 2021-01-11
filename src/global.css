@@ -9,11 +9,39 @@ body,
   height: 100%;
 }
 
+img,
+video {
+  max-width: unset !important;
+}
+
 @layer utilities {
   .anim-duration-600 {
     animation-duration: 600ms !important;
   }
-  .anim-duration-1500 {
-    animation-duration: 1500ms !important;
-  }
+}
+
+.absolute-center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.absolute-center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.absolute-center-bottom {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
 }

@@ -1,19 +1,52 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Navbar from "../components/navbar"
 import { TransitionGroup, Transition } from "react-transition-group"
 import { roomMap, animPresetMap } from "../animation/animationMap"
 import "../animation/page-animations.css"
-import "./index.css"
-import { Intro, Skill, Timeline, Goal, Gallery } from "../pages.js"
+import "./css/index.css"
+
+import Intro from "./intro"
+import Skill from "./skill"
+import Timeline from "./timeline"
+import Goal from "./goal"
+import Gallery from "./gallery"
+import "./css/page.css"
 
 let targetPage = [] //change this to an array
 let prevPage = "intro"
 let numTransition = 0
 let multipleRoute = false
 let pageOrder = Object.keys(roomMap)
-let keyCooldown = false
+if (typeof document !== `undefined`) {
+  document.body.style = "background: #30343d;"
+}
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
+  const [loaded, setLoaded] = React.useState(false)
+  const [showContent, setShowContent] = React.useState(true)
+  useEffect(() => {
+    const images = [
+      require("../images/background/intro.jpg"),
+      require("../images/background/coming-soon.jpg"),
+      require("../images/background/goal.jpg"),
+      require("../images/background/timeline.jpg"),
+      require("../images/background/skill.jpg"),
+      require("../images/star1.png"),
+      require("../images/star2.png"),
+    ]
+    const promises = images.map(
+      img =>
+        new Promise((resolve, rejects) => {
+          const image = new Image()
+          image.src = img
+          image.onload = resolve
+          image.onerror = rejects
+        })
+    )
+    Promise.all(promises).then(() => {
+      setLoaded(true)
+    })
+  }, [])
   function navigate(key) {
     targetPage = []
     numTransition = 0
@@ -54,16 +87,12 @@ const IndexPage = () => {
   }
   if (typeof window !== `undefined`) {
     window.onwheel = function (e) {
-      if (keyCooldown) return
+      if (targetPage.length > 0) return
       let index = getNextPage(e.deltaY > 0) //navigate forward or backward
       navigate(pageOrder[index])
-      keyCooldown = true
-      setTimeout(() => {
-        keyCooldown = false
-      }, 800)
     }
     window.onkeyup = e => {
-      if (keyCooldown) return
+      if (targetPage.length > 0) return
       if (e.key == "ArrowDown" || e.key == "s") {
         if (page != "goal") return
         navigate(prevPage)
@@ -81,15 +110,21 @@ const IndexPage = () => {
         if (pageOrder[index] == "goal") index++
         navigate(pageOrder[index])
       } else return
-      keyCooldown = true
-      setTimeout(() => {
-        keyCooldown = false
-      }, 800)
     }
   }
+  if (!loaded)
+    return (
+      <div className="h-full relative">
+        <div className="loader mx-auto"></div>
+      </div>
+    )
   return (
     <>
-      <Navbar navigate={navigate} />
+      <Navbar
+        navigate={navigate}
+        active={page}
+        showContentFn={setShowContent}
+      />
       <div className="page-wrapper">
         <TransitionGroup component={null}>
           <Transition
@@ -121,27 +156,43 @@ const IndexPage = () => {
               } else if (numTransition >= 2) {
                 numTransition++
               }
-              let comp
               switch (page) {
                 case "intro":
-                  comp = <Intro />
-                  break
+                  return (
+                    <Intro
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "skill":
-                  comp = <Skill />
-                  break
+                  return (
+                    <Skill
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "timeline":
-                  comp = <Timeline />
-                  break
+                  return (
+                    <Timeline
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "goal":
-                  comp = <Goal />
-                  break
+                  return (
+                    <Goal
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
                 case "gallery":
-                  comp = <Gallery />
-                  break
+                  return (
+                    <Gallery
+                      className={"page" + animClass}
+                      showContent={showContent}
+                    />
+                  )
               }
-              return (
-                <div className={"bg-gray-300 page" + animClass}>{comp}</div>
-              )
             }}
           </Transition>
         </TransitionGroup>

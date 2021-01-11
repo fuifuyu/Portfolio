@@ -1,0 +1,86 @@
+.hover-target {
+  transition: transform 0.25s, height 0.25s;
+  transition-timing-function: ease-out;
+  transform: translateY(200%);
+}
+.detect-hover {
+  height: 20%;
+}
+.detect-hover:hover .hover-target {
+  transform: translateY(0%);
+}
+
+@keyframes skill-load {
+  from {
+    width: 0%;
+  }
+}
+
+.bar {
+  background-color: #eee;
+  padding: 0.15rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.bar::before {
+  @apply text-xs md:text-base;
+  content: attr(data-label);
+  display: inline-block;
+  padding: 0.3rem 4.5rem 0.3rem 0.75rem;
+  border-radius: inherit;
+  animation: skill-load 2s 0s;
+}
+
+.bar.bar-1::before {
+  background-color: #8eddd0;
+  width: calc(20%);
+}
+.bar.bar-2::before {
+  background-color: #6fbec4;
+  width: calc(40%);
+}
+.bar.bar-3::before {
+  background-color: #5092ac;
+  width: calc(60%);
+}
+.bar.bar-4::before {
+  background-color: #266575;
+  width: calc(80%);
+}
+.bar.bar-5::before {
+  background-color: #224c72;
+  width: calc(100%);
+}
+
+.bar::after {
+  @apply text-xs md:text-sm -ml-12 md:-ml-16;
+}
+
+.bar.bar-1::after {
+  content: "Level 1";
+}
+
+.bar.bar-2::after {
+  content: "Level 2";
+}
+.bar.bar-3::after {
+  content: "level 3";
+}
+.bar.bar-4::after {
+  content: "level 4";
+}
+.bar.bar-5::after {
+  content: "level 5";
+}
+
+button {
+  @apply px-4 py-1 bg-tint-1 focus:outline-none;
+}
+
+button.active {
+  @apply bg-tint-2;
+}
