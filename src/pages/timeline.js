@@ -1,4 +1,5 @@
 import React, { useEffect } from "react"
+import { Lightbox } from "react-modal-image"
 import "./css/timeline.css"
 import "../animation/animation.css"
 import fox from "../images/timeline/fox.gif"
@@ -149,6 +150,7 @@ const history = [
 
 export default function Timeline({ className, showContent }) {
   let [type, setType] = React.useState("all")
+  let [modalImage, setModalImage] = React.useState()
   let ref = React.createRef()
   useEffect(() => {
     ref.current?.addEventListener("animationend", e => {
@@ -199,7 +201,13 @@ export default function Timeline({ className, showContent }) {
                 : history.filter(h => h.type == type)
               ).map(({ title, date, desc, type, images, tags }) => {
                 let imgComps = images?.map((img, index) => (
-                  <div className="card-image-container relative" key={index}>
+                  <div
+                    className="card-image-container relative cursor-pointer"
+                    key={index}
+                    onClick={() => {
+                      setModalImage(img)
+                    }}
+                  >
                     <img src={img} className="card-image" />
                     <img src={img} className="card-hover-image rounded-md" />
                   </div>
@@ -238,6 +246,16 @@ export default function Timeline({ className, showContent }) {
               })}
             </div>
           </div>
+          {modalImage != undefined && (
+            <Lightbox
+              medium={modalImage}
+              hideDownload="true"
+              hideZoom="true"
+              onClose={() => {
+                setModalImage(undefined)
+              }}
+            />
+          )}
         </>
       )}
     </div>
