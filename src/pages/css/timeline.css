@@ -46,7 +46,7 @@
 }
 
 .card-end {
-  @apply flex flex-row flex-wrap justify-center;
+  @apply flex flex-row flex-wrap;
 }
 
 .card.projects {
