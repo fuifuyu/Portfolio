@@ -23,13 +23,13 @@ export default function Intro({ className, showContent = true }) {
             that I learnt. I will evolve, and so will the website :)
           </p>
           <p>I hope you have a good journey and happy learning!</p>
-          <p className="block sm:hidden text-red-800 text-base">
-            **Use a computer to gain full experience of the website!**
-          </p>
-          <p className="text-base hidden sm:block">
+          <p className="text-base">
             ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
           </p>
-          <p className="mt-1">Contact: hhasuky@gmail.com</p>
+          <p className="mt-1 text-xl">Contact: hhasuky@gmail.com</p>
+          <p className="text-red-800 text-base">
+            **Use a computer to gain full experience of the website!**
+          </p>
         </div>
       )}
     </div>
