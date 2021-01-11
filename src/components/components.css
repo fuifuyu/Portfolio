@@ -80,14 +80,6 @@
 button {
   @apply px-4 py-1 bg-tint-1 focus:outline-none;
 }
-.navbar > button:first-of-type {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-.navbar > button:last-of-type {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
 button.active {
   @apply bg-tint-2;
