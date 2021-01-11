@@ -27,7 +27,7 @@ export default function Intro({ className, showContent = true }) {
             ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
           </p>
           <p className="mt-1 text-xl">Contact: hhasuky@gmail.com</p>
-          <p className="text-red-800 text-base">
+          <p className="text-red-800 text-base text-center">
             **Use a computer to gain full experience of the website!**
           </p>
         </div>
