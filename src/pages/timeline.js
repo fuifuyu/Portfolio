@@ -187,7 +187,7 @@ export default function Timeline({ className, showContent }) {
           </div>
           <div
             ref={ref}
-            className="relative w-2/3 h-1/2 md:h-2/3 mx-auto wipe bg-tint-2 bg-opacity-5 border-r-8 border-l-8 border-tint-1 rounded-xl border-opacity-75 overflow-x-scroll overflow-y-hidden z-50"
+            className="relative w-11/12 md:w-2/3 h-1/2 md:h-2/3 mx-auto wipe bg-tint-2 bg-opacity-5 border-r-8 border-l-8 border-tint-1 rounded-xl border-opacity-75 overflow-x-scroll overflow-y-hidden z-50"
             onWheel={e => {
               e.currentTarget.scrollLeft += e.deltaY
               e.stopPropagation()

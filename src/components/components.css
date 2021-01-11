@@ -27,7 +27,7 @@
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 .bar::before {
-  @apply text-base;
+  @apply text-xs md:text-base;
   content: attr(data-label);
   display: inline-block;
   padding: 0.3rem 4.5rem 0.3rem 0.75rem;
@@ -57,8 +57,7 @@
 }
 
 .bar::after {
-  @apply text-sm;
-  margin-left: -4rem;
+  @apply text-xs md:text-sm -ml-12 md:-ml-16;
 }
 
 .bar.bar-1::after {

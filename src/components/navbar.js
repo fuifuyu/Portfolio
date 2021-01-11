@@ -15,7 +15,7 @@ const Navbar = ({ navigate, showContentFn, active }) => {
         } pb-4`}
       >
         <div
-          className={`${hoverTarget} opacity-50 justify-center items-end flex flex-row h-full text-center text-gray-700 navbar`}
+          className={`${hoverTarget} opacity-50 justify-center items-end flex flex-row flex-wrap h-full text-center text-gray-700 sm:navbar`}
         >
           <button
             onClick={() => navigate("intro")}

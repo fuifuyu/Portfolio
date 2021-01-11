@@ -36,7 +36,7 @@ export default function Skill({ className, showContent = true }) {
       {showContent && (
         <Skillbar
           skills={skills}
-          className="mx-auto w-2/3 h-1/2 mb-40"
+          className="mx-auto w-11/12 md:w-2/3 h-1/2 mb-40"
         ></Skillbar>
       )}
     </div>
