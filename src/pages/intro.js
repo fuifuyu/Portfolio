@@ -24,7 +24,7 @@ export default function Intro({ className, showContent = true }) {
           </p>
           <p>I hope you have a good journey and happy learning!</p>
           <p className="block sm:hidden text-red-800 text-base">
-            **Use a bigger screen to gain full experience of the website!**
+            **Use a computer to gain full experience of the website!**
           </p>
           <p className="text-base hidden sm:block">
             ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
