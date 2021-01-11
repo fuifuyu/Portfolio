@@ -10,7 +10,7 @@ const Navbar = ({ navigate, showContentFn, active }) => {
   return (
     <>
       <div
-        className={`fixed inset-x-0 bottom-0 z-10${
+        className={`fixed inset-x-0 bottom-0 z-50${
           hideNav ? " detect-hover" : ""
         } pb-4`}
       >
