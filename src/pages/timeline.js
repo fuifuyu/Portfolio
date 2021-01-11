@@ -135,12 +135,11 @@ const history = [
         <div>
           1) A splitscreen random-generated maze with items that destroy walls.
         </div>
-        <div>2) A very simple marble maze game.</div>
+        <div>2) A simple marble maze game.</div>
         <div>
-          3) A stress-free VR environment where user can fish, grow flowers, and
-          interact with a pet fox.
+          3) A relaxing VR environment with a pet fox and fishing activity.
         </div>
-        <div className="text-sm">*Fox animations is created by the team*</div>
+        <div className="text-sm">*The fox below is created by team member*</div>
       </>
     ),
     images: [trapped, maze, fox],
@@ -225,7 +224,11 @@ export default function Timeline({ className, showContent }) {
                       <div className="card-body whitespace-pre-line">
                         {desc}
                       </div>
-                      <div className="card-end justify-center">{imgComps}</div>
+                      {imgComps?.length > 0 && (
+                        <div className="card-end justify-center mt-1">
+                          {imgComps}
+                        </div>
+                      )}
                       {tagComps?.length > 0 && (
                         <div className="card-end text-sm mt-1">{tagComps}</div>
                       )}

@@ -43,7 +43,7 @@ export default function Goal({ className, showContent }) {
         <div className="absolute bottom-10 right-10">
           <ImageContainer src={star1} size={{ width: "23rem" }}>
             <div className="content absolute-center-bottom goal-container">
-              <div>Gain more experience in software and web dev.</div>
+              <div>Gain more experience in software and web dev</div>
             </div>
           </ImageContainer>
         </div>

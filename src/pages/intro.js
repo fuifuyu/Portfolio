@@ -19,11 +19,8 @@ export default function Intro({ className, showContent = true }) {
           <p>I am a computer science student in Canada who likes to draw.</p>
           <p>
             I wanted to express my character - with not only plain words on the
-            screen or paper. And so, this "world" is born.
-          </p>
-          <p>
-            This is also a test ground to play with concepts that I learnt. I
-            will evolve, and so will my world :)
+            screen or paper. This is also a test ground to play with concepts
+            that I learnt. I will evolve, and so will the website :)
           </p>
           <p>I hope you have a good journey and happy learning!</p>
           <p className="text-base">
