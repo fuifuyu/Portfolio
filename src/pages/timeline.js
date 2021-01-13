@@ -5,6 +5,16 @@ import "../animation/animation.css"
 import fox from "../images/timeline/fox.gif"
 import maze from "../images/timeline/maze.gif"
 import trapped from "../images/timeline/trapped.gif"
+import gue1 from "../images/timeline/gue-1.gif"
+import gue2 from "../images/timeline/gue-2.gif"
+import scheduler2 from "../images/timeline/scheduler-2.gif"
+import scheduler3 from "../images/timeline/scheduler-3.gif"
+import watopoly1 from "../images/timeline/watopoly-1.jpeg"
+import watopoly2 from "../images/timeline/watopoly-2.jpeg"
+import watopoly3 from "../images/timeline/watopoly-3.jpeg"
+import watopoly4 from "../images/timeline/watopoly-4.gif"
+import robotRed from "../images/timeline/robot-red.jpeg"
+import ferris from "../images/timeline/ferris.jpeg"
 
 const history = [
   {
@@ -13,15 +23,15 @@ const history = [
     type: "projects",
     desc: (
       <>
-        A team of 5 with various background aiming to solve societal problems
-        through art-oriented solutions.
+        A diverse team aiming to solve societal problems through art and
+        technology-oriented solutions.
         <div className="text-sm">
           <u>Currently working on: Cup wastes</u>
         </div>
       </>
     ),
     images: [],
-    tags: ["Angular 8", "Problem Solving"],
+    tags: ["Angular 8", "Arduino Nano"],
   },
   {
     title: "Loadlink Technologies",
@@ -30,19 +40,13 @@ const history = [
     desc: (
       <>
         <u>Front-end Developer</u>
-        <div>Worked on a suite of tools that connect carriers and brokers</div>
+        <div>
+          Delivered complex UI components based on the project requirement for a
+          suite of tools that connect carriers and brokers.
+        </div>
       </>
     ),
-    images: [],
     tags: ["Angular 7", "Xamarin Forms"],
-  },
-  {
-    title: "Gamified University Experience",
-    date: "2020",
-    type: "projects",
-    desc: "Gamification of my university experience in a platformer!",
-    images: [],
-    tags: ["Unity", "C#"],
   },
   {
     title: "Watopoly",
@@ -50,8 +54,16 @@ const history = [
     type: "projects",
     desc:
       "Replicate monopoly game in text and XDisplay according to the official rules.",
-    images: [],
+    images: [watopoly1, watopoly2, watopoly3, watopoly4],
     tags: ["C++", "Design Pattern"],
+  },
+  {
+    title: "Gamified University Experience",
+    date: "2020",
+    type: "projects",
+    desc: "Gamification of my university experience in a platformer!",
+    images: [gue1, gue2],
+    tags: ["Unity", "C#"],
   },
   {
     title: "Grace Hopper Celebration",
@@ -65,7 +77,7 @@ const history = [
     type: "projects",
     desc:
       "A time management application, in mobile and web, that tracks the tasks that need to be done and where you have spent your time!",
-    images: [],
+    images: [scheduler2, scheduler3],
     tags: ["Flutter", "ReactJS"],
   },
   {
@@ -87,7 +99,7 @@ const history = [
     date: "2020",
     type: "others",
     desc:
-      "Promoted the SDG Goals from UN by reaching out to youth who wish to volunteering and contributing to social causes abroad.",
+      "Promoted the SDG Goals from UN by reaching out to youth who wish to volunteering for a social cause abroad.",
   },
   {
     title: "Unionville H.S Robotics Team",
@@ -98,12 +110,12 @@ const history = [
         <u>President</u>
         <div>
           Found and led Team 7721 to participate in the FIRST Robotics
-          competition.
+          competition. We also competed in the Ontario Skills Competition.
         </div>
         <div>Lots of memorable moments and fun!</div>
       </>
     ),
-    images: [],
+    images: [robotRed, ferris],
     tags: ["Robotics", "Java"],
   },
   {
@@ -161,9 +173,9 @@ export default function Timeline({ className, showContent }) {
     <div className={className + " bg-timeline flex flex-col justify-center"}>
       {showContent && (
         <>
-          <div className="flex flex-col sm:flex-row justify-end w-auto sm:w-2/3 mx-auto mb-2 truncate rounded-xl wipe">
+          <div className="flex flex-col sm:flex-row justify-end w-auto sm:w-2/3 mx-auto mb-2 truncate rounded wipe">
             <button
-              className={`${type == "all" ? "active" : ""} sm:rounded-l-xl`}
+              className={`${type == "all" ? "active" : ""} sm:rounded-l`}
               onClick={() => setType("all")}
             >
               All

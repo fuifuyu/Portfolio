@@ -29,7 +29,7 @@
 .card {
   padding: 0.5rem 1rem 1rem 1rem;
   background-color: burlywood;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 .card::before {
   display: block;
