@@ -17,6 +17,15 @@ let prevPage = "intro"
 let numTransition = 0
 let multipleRoute = false
 let pageOrder = Object.keys(roomMap)
+const images = [
+  require("../images/background/intro.jpg"),
+  require("../images/background/coming-soon.jpg"),
+  require("../images/background/goal.jpg"),
+  require("../images/background/timeline.jpg"),
+  require("../images/background/skill.jpg"),
+  require("../images/star1.png"),
+  require("../images/star2.png"),
+]
 if (typeof document !== `undefined`) {
   document.body.style = "background: #30343d;"
 }
@@ -25,15 +34,6 @@ const IndexPage = () => {
   const [loaded, setLoaded] = React.useState(false)
   const [showContent, setShowContent] = React.useState(true)
   useEffect(() => {
-    const images = [
-      require("../images/background/intro.jpg"),
-      require("../images/background/coming-soon.jpg"),
-      require("../images/background/goal.jpg"),
-      require("../images/background/timeline.jpg"),
-      require("../images/background/skill.jpg"),
-      require("../images/star1.png"),
-      require("../images/star2.png"),
-    ]
     const promises = images.map(
       img =>
         new Promise((resolve, rejects) => {
@@ -88,6 +88,7 @@ const IndexPage = () => {
   if (typeof window !== `undefined`) {
     window.onwheel = function (e) {
       if (targetPage.length > 0) return
+      if (e.ctrlKey) return
       let index = getNextPage(e.deltaY > 0) //navigate forward or backward
       navigate(pageOrder[index])
     }
