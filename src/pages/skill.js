@@ -14,7 +14,7 @@ const skills = [
     level: "3",
   },
   {
-    label: "Web development (Angular 8 & ReactJS)",
+    label: "Web development (Angular & ReactJS)",
     level: "3",
   },
   {
