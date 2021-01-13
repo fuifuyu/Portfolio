@@ -61,7 +61,14 @@ const history = [
     title: "Gamified University Experience",
     date: "2020",
     type: "projects",
-    desc: "Gamification of my university experience in a platformer!",
+    desc: (
+      <>
+        Gamification of my university journey in a platformer!
+        <div className="text-sm">
+          *All humanoid sprites are placeholder and are not owned by us*
+        </div>
+      </>
+    ),
     images: [gue1, gue2],
     tags: ["Unity", "C#"],
   },
