@@ -21,7 +21,7 @@ export default function Intro({ className, showContent = true }) {
           <p>
             This website is inspired by many creative, talented individuals who
             created an interesting web browsing experience through their online
-            portfolio. Seeing them, I become motivated to create an unique world
+            portfolio. Seeing them, I became motivated to create an unique world
             that express my character as well by combining the use of art and
             technology.
           </p>
