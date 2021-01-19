@@ -34,18 +34,16 @@ const history = [
     tags: ["Angular 8", "Arduino Nano"],
   },
   {
+    title: "The Ghost That Blew Out the Candle",
+    date: "2021",
+    type: "projects",
+    desc: "An adventure horror game prototype in the ruins of past emperors.",
+  },
+  {
     title: "Loadlink Technologies",
     date: "2020",
     type: "work",
-    desc: (
-      <>
-        <u>Front-end Developer</u>
-        <div>
-          Delivered complex UI components based on the project requirement for a
-          suite of tools that connect carriers and brokers.
-        </div>
-      </>
-    ),
+    desc: <u>Front-end Developer</u>,
     tags: ["Angular 7", "Xamarin Forms"],
   },
   {
@@ -98,6 +96,9 @@ const history = [
           Ͱ Developed an app to keep track of food expiry date @ Elle's Hack
           2020
         </div>
+        <div>
+          Ͱ Created "The Ghost That Blew Out the Candle" @ Hack The North 2021
+        </div>
       </>
     ),
   },
@@ -129,13 +130,7 @@ const history = [
     title: "Indusflow System",
     date: "2018",
     type: "work",
-    desc: (
-      <>
-        <u>Software Developer Intern</u>
-        <div>Ͱ Designed data models and implemented it in the webpage.</div>
-        <div>Ͱ Fixed bugs in the backup tool in visual basic.</div>
-      </>
-    ),
+    desc: <u>Software Developer Intern</u>,
     tags: ["JQuery/HTML", "SQL", "Visual Basic"],
   },
   {
