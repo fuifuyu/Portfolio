@@ -2,19 +2,20 @@ import React from "react"
 import Skillbar from "../components/skill-bar"
 const skills = [
   {
-    label: "Having fun while learning!",
+    label:
+      "Having fun while learning! (The only skill that I can confidently claim to be an expert.)",
     level: "5",
   },
   {
-    label: "C#",
+    label: "C++",
     level: "4",
   },
   {
-    label: "C++",
+    label: "C#",
     level: "3",
   },
   {
-    label: "Web development (Angular & ReactJS)",
+    label: "Web development",
     level: "3",
   },
   {
