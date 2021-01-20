@@ -1,13 +1,11 @@
 import React from "react"
+import { inherits } from "util"
 import "./components.css"
 
-const ImageContainer = ({ children, size, src }) => {
+const ImageContainer = ({ children, className, src }) => {
   return (
-    <div className="relative">
-      <img
-        src={src}
-        style={{ width: size?.width ?? "auto", height: size?.height ?? "auto" }}
-      />
+    <div className={className}>
+      <img src={src} style={{ width: "100%", height: "100%" }} />
       {children}
     </div>
   )

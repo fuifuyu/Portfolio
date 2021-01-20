@@ -40,7 +40,7 @@
 .goal-container {
   color: rgb(29, 90, 92);
   min-width: 80%;
-  @apply py-1 rounded text-center font-bold leading-tight z-20 border-r-4 border-l-4 border-tint-1 border-opacity-80 truncate;
+  @apply py-1 rounded text-center font-bold leading-tight z-20 border-r-4 border-l-4 border-tint-1 border-opacity-80;
 }
 
 .goal-container > *:first-child {

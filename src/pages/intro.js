@@ -21,7 +21,7 @@ export default function Intro({ className, showContent = true }) {
           <p>
             This website is inspired by many creative, talented individuals who
             created an interesting web browsing experience through their online
-            portfolio. Seeing them, I became motivated to create an unique world
+            portfolio. Seeing them, I became motivated to create a unique world
             that express my character as well by combining the use of art and
             technology.
           </p>
@@ -33,7 +33,6 @@ export default function Intro({ className, showContent = true }) {
             ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
           </p>
           <p>I hope you have a good journey and happy learning!</p>
-          <p className="my-1">Contact: hhasuky@gmail.com</p>
           <p className="text-red-800 text-base text-center">
             **Use a computer for the complete experience**
           </p>
