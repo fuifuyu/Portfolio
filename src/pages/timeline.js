@@ -18,22 +18,6 @@ import ferris from "../images/timeline/ferris.jpeg"
 
 const history = [
   {
-    title: "The Pear Project",
-    date: "2019-Current",
-    type: "projects",
-    desc: (
-      <>
-        A diverse team aiming to solve societal problems through art and
-        technology-oriented solutions.
-        <div className="text-sm">
-          <u>Currently working on: Cup wastes</u>
-        </div>
-      </>
-    ),
-    images: [],
-    tags: ["Angular 8", "Arduino Nano"],
-  },
-  {
     title: "The Ghost That Blew Out the Candle",
     date: "2021",
     type: "projects",
@@ -43,7 +27,7 @@ const history = [
     title: "Loadlink Technologies",
     date: "2020",
     type: "work",
-    desc: <u>Front-end Developer</u>,
+    desc: <span className="text-gray-700">Front-end Developer</span>,
     tags: ["Angular 7", "Xamarin Forms"],
   },
   {
@@ -74,7 +58,7 @@ const history = [
     title: "Grace Hopper Celebration",
     date: "2020",
     type: "others",
-    desc: <u>Attendee</u>,
+    desc: <span className="text-gray-700">Attendee</span>,
   },
   {
     title: "Where is my time?",
@@ -91,7 +75,7 @@ const history = [
     type: "others",
     desc: (
       <>
-        <u>Hacker</u>
+        <span className="text-gray-700">Hacker</span>
         <div>
           Ͱ Developed an app to keep track of food expiry date @ Elle's Hack
           2020
@@ -115,7 +99,7 @@ const history = [
     type: "others",
     desc: (
       <>
-        <u>President</u>
+        <span className="text-gray-700">President</span>
         <div>
           Found and led Team 7721 to participate in the FIRST Robotics
           competition. We also competed in the Ontario Skills Competition.
@@ -130,7 +114,7 @@ const history = [
     title: "Indusflow System",
     date: "2018",
     type: "work",
-    desc: <u>Software Developer Intern</u>,
+    desc: <span className="text-gray-700">Software Developer Intern</span>,
     tags: ["JQuery/HTML", "SQL", "Visual Basic"],
   },
   {
