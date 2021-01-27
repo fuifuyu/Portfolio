@@ -13,7 +13,7 @@ export default function Intro({ className, showContent = true }) {
       {showContent && (
         <div
           ref={ref}
-          className="bg-tint-1 bg-opacity-50 sm:w-7/12 p-2 sm:p-8 mx-3 sm:mx-5 md:mx-10 text-gray-700 rounded text-base sm:text-lg md:text-xl fade-in"
+          className="bg-tint-1 bg-opacity-60 sm:w-7/12 p-2 sm:p-8 mx-3 sm:mx-5 md:mx-10 text-gray-700 rounded text-base sm:text-lg md:text-xl fade-in"
         >
           <p className="mb-1 sm:mb-4 text-xl sm:text-2xl md:text-3xl">
             Hi - thank you for dropping by!
@@ -26,16 +26,12 @@ export default function Intro({ className, showContent = true }) {
             technology.
           </p>
           <p className="mt-3">
-            It is also a test ground to play with concepts that I learnt. I will
-            evolve, and so will the website :)
+            It is also a test ground to play with concepts that I learnt.
           </p>
           <p className="text-base mb-3">
             ( Hint: Try exploring around with "ASDW"/arrow/scrollwheel! )
           </p>
-          <p>I hope you have a good journey and happy learning!</p>
-          <p className="text-red-800 text-base text-center">
-            **Use a computer for the complete experience**
-          </p>
+          <p>Happy learning and wish you a good journey!</p>
         </div>
       )}
     </div>
