@@ -11,6 +11,10 @@ const skills = [
     level: "4",
   },
   {
+    label: "Python",
+    level: "4",
+  },
+  {
     label: "C#",
     level: "3",
   },

@@ -7,13 +7,12 @@ export default function Goal({ className, showContent }) {
   return (
     <div className={className + " bg-goal"}>
       <div
-        className={`relative mx-4 xl:mx-24 h-full pb-12 flex flex-row flex-wrap content-around ${
-          showContent ? "" : "hide"
-        }`}
+        className={`relative mx-4 xl:mx-24 h-full pb-12 flex flex-row flex-wrap content-around ${showContent ? "" : "hide"
+          }`}
       >
         <ImageContainer src={star1} className="relative w-1/3">
           <div className="content absolute-center-bottom goal-container text-xs xl:text-base">
-            <div>Participate in illustration competition!</div>
+            <div>Keep drawing~</div>
           </div>
         </ImageContainer>
         <ImageContainer
@@ -31,18 +30,18 @@ export default function Goal({ className, showContent }) {
         </ImageContainer>
         <ImageContainer src={star2} className="relative w-1/3">
           <div className="content absolute-center-bottom goal-container text-xs xl:text-base">
-            <div>Excercise more...</div>
+            <div>Excercise, excercise, excercise</div>
           </div>
         </ImageContainer>
         <ImageContainer src={star2} className="relative w-1/3">
           <div className="content absolute-center-top goal-container text-xs xl:text-base">
-            <div>Exchange abroad!</div>
+            <div>Study exchange abroad!</div>
           </div>
         </ImageContainer>
         <div className="w-1/3"></div>
         <ImageContainer src={star1} className="relative w-1/3">
           <div className="content absolute-center-top goal-container text-xs xl:text-base">
-            <div>Work on open source project</div>
+            <div>Work on arduino project</div>
           </div>
         </ImageContainer>
       </div>

@@ -15,19 +15,39 @@ import watopoly3 from "../images/timeline/watopoly-3.jpeg"
 import watopoly4 from "../images/timeline/watopoly-4.gif"
 import robotRed from "../images/timeline/robot-red.jpeg"
 import ferris from "../images/timeline/ferris.jpeg"
+import hackernest from "../images/timeline/hackernest.png"
 
 const history = [
+  {
+    title: "Wish, ContextLogic Inc",
+    date: "2021",
+
+    type: "work",
+    desc: <span className="text-gray-700">Backend Developer</span>,
+    tags: ["Python", "Golang", "MongoDB"]
+  },
   {
     title: "The Ghost That Blew Out the Candle",
     date: "2021",
     type: "projects",
-    desc: "An adventure horror game prototype in the ruins of past emperors.",
+    desc: (
+      <>
+        <a className="text-sm hover:text-blue-500 hover:underline" href="https://youtu.be/eL4Oxux2Br4">
+          demo video
+        </a>
+        <div>
+          An adventure horror game prototype in the ruins of past emperors.
+        </div>
+      </>
+    ),
+    images: [hackernest],
+    tags: ["C++", "VS 2019"]
   },
   {
     title: "Loadlink Technologies",
     date: "2020",
     type: "work",
-    desc: <span className="text-gray-700">Front-end Developer</span>,
+    desc: <span className="text-gray-700">Frontend Developer</span>,
     tags: ["Angular 7", "Xamarin Forms"],
   },
   {
@@ -45,7 +65,7 @@ const history = [
     type: "projects",
     desc: (
       <>
-        Gamification of my university journey in a platformer!
+        Gamification of my university journey in a platformer! (Prototype)
         <div className="text-sm">
           *All humanoid sprites are placeholder and are not owned by us*
         </div>
@@ -115,7 +135,7 @@ const history = [
     date: "2018",
     type: "work",
     desc: <span className="text-gray-700">Software Developer Intern</span>,
-    tags: ["JQuery/HTML", "SQL", "Visual Basic"],
+    tags: ["JQuery/HTML", "SQL", "ASP.NET"],
   },
   {
     title: "Toronto Montessori School",
@@ -225,7 +245,7 @@ export default function Timeline({ className, showContent }) {
                     <div className={`card ${type}`}>
                       <div className="card-title">
                         <div>{title}</div>
-                        {date && <div>{date}</div>}
+                        {date && <div class="bg-white bg-opacity-30 rounded pl-1">{date}</div>}
                       </div>
                       <div className="card-body whitespace-pre-line">
                         {desc}
