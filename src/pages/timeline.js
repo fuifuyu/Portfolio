@@ -27,7 +27,7 @@ const history = [
     tags: ["Python", "Golang", "MongoDB"]
   },
   {
-    title: "The Ghost That Blew Out the Candle",
+    title: "The Ghost",
     date: "2021",
     type: "projects",
     desc: (
