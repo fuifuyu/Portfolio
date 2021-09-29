@@ -16,15 +16,29 @@ import watopoly4 from "../images/timeline/watopoly-4.gif"
 import robotRed from "../images/timeline/robot-red.jpeg"
 import ferris from "../images/timeline/ferris.jpeg"
 import hackernest from "../images/timeline/hackernest.png"
+import realtimefluid from "../images/timeline/realtime-fluid.gif"
 
 const history = [
+  {
+    title: "Undergraduate Research Assistantship Program",
+    date: "2021",
+    type: "work",
+    desc: (
+    <>
+      <span className="text-gray-700">Part-time research with Professor Toshiya Hachisuka</span>
+      <div>This is a demo of the implementation of the paper "Real-Time Fluid Dynamics for Games" by Joe Stam</div>
+    </>
+    ),
+    images: [realtimefluid],
+    tags: ["C++", "Graphics", "Fluid simulation"]
+  },
   {
     title: "Wish, ContextLogic Inc",
     date: "2021",
 
     type: "work",
     desc: <span className="text-gray-700">Backend Developer</span>,
-    tags: ["Python", "Golang", "MongoDB"]
+    tags: ["Python", "Go", "MongoDB"]
   },
   {
     title: "The Ghost",
