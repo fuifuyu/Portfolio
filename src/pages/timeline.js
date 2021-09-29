@@ -26,7 +26,7 @@ const history = [
     desc: (
     <>
       <span className="text-gray-700">Part-time research with Professor Toshiya Hachisuka</span>
-      <div>This is a demo of the implementation of the paper "Real-Time Fluid Dynamics for Games" by Joe Stam</div>
+      <div>This is a demo of the implementation of the <a className="text-blue-700 hover:text-blue-500 hover:underline" href="https://www.dgp.toronto.edu/public_user/stam/reality/Research/pdf/GDC03.pdf">paper</a> "Real-Time Fluid Dynamics for Games" by Jos Stam</div>
     </>
     ),
     images: [realtimefluid],
@@ -46,7 +46,7 @@ const history = [
     type: "projects",
     desc: (
       <>
-        <a className="text-sm hover:text-blue-500 hover:underline" href="https://youtu.be/eL4Oxux2Br4">
+        <a className="text-sm text-blue-700 hover:text-blue-500 hover:underline" href="https://youtu.be/eL4Oxux2Br4">
           demo video
         </a>
         <div>
