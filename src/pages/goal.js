@@ -41,7 +41,7 @@ export default function Goal({ className, showContent }) {
         <div className="w-1/3"></div>
         <ImageContainer src={star1} className="relative w-1/3">
           <div className="content absolute-center-top goal-container text-xs xl:text-base">
-            <div>Work on arduino project</div>
+            <div>Meet new people</div>
           </div>
         </ImageContainer>
       </div>
