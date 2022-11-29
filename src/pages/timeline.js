@@ -20,6 +20,31 @@ import realtimefluid from "../images/timeline/realtime-fluid.gif"
 
 const history = [
   {
+    title: "SIGGRAPH Asia",
+    date: "2022",
+    type: "work",
+    desc: <span className="text-gray-700">Team Leader</span>
+  },
+  {
+    title: "Kyoto University",
+    date: "2022",
+    type: "other",
+    desc: <span className="text-gray-700">Study Exchange</span>
+  },
+  {
+    title: "SIGGRAPH",
+    date: "2022",
+    type: "work",
+    desc: <span className="text-gray-700">Student Volunteer</span>
+  },
+  {
+    title: "Mercari Inc",
+    date: "2022",
+    type: "work",
+    desc: <span className="text-gray-700">Backend Developer</span>,
+    tags: ["Go","GCP", "datadog"]
+  },
+  {
     title: "Undergraduate Research Assistantship Program",
     date: "2021",
     type: "work",
@@ -35,7 +60,6 @@ const history = [
   {
     title: "Wish, ContextLogic Inc",
     date: "2021",
-
     type: "work",
     desc: <span className="text-gray-700">Backend Developer</span>,
     tags: ["Python", "Go", "MongoDB"]
