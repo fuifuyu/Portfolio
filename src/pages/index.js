@@ -26,9 +26,14 @@ const images = [
   require("../images/star1.png"),
   require("../images/star2.png"),
 ]
+const cursorFires = Array.from({length:25},(v,k) => k+1).map((index) => require(`../images/fire/fire${index}.png`));
+console.log(cursorFires);
 if (typeof document !== `undefined`) {
   document.body.style = "background: #30343d;"
 }
+
+let mouseIndex = 1;
+let threshold = 0;
 const IndexPage = () => {
   const [page, setPage] = React.useState("intro")
   const [loaded, setLoaded] = React.useState(false)
@@ -86,6 +91,15 @@ const IndexPage = () => {
     return index
   }
   if (typeof window !== `undefined`) {
+    window.onmousemove = function (e) {
+      if(++threshold<8){
+        return;
+      }
+      threshold=0;
+      mouseIndex++;
+      if(mouseIndex > 24) mouseIndex = 0;
+      document.body.style.cursor = `url("${cursorFires[mouseIndex]}") 32 40, auto`;
+    }
     window.onwheel = function (e) {
       if (targetPage.length > 0) return
       if (e.ctrlKey) return
@@ -115,9 +129,11 @@ const IndexPage = () => {
   }
   if (!loaded)
     return (
-      <div className="h-full relative">
-        <div className="loader mx-auto"></div>
-      </div>
+      <>
+        <div className="h-full relative">
+          <div className="loader mx-auto"></div>
+        </div>
+      </>
     )
   return (
     <>
@@ -201,4 +217,5 @@ const IndexPage = () => {
     </>
   )
 }
+
 export default IndexPage
